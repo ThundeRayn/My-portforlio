@@ -1,0 +1,60 @@
+.container{
+    height: 400px;
+    position:flex;
+    background-color: rgb(5, 5, 5);
+    /*background-image: linear-gradient(transparent, rgb(0, 0, 0) 70%), url(../../assets/img/blackforest.png);
+    background-size: 350px;*/
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    animation-name: fadeAnimation;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+}
+
+@keyframes fadeAnimation {
+    from {
+      transform: scale(100%);
+    }
+    to {
+      transform: scale(90%);
+    }
+  }
+
+.intro0{
+    position:relative;
+    margin-left: 2.2rem;
+    top: 9.5rem;
+    max-width: 415px;
+    font-weight: 200;
+    font-size: 1rem;
+}
+.intro1{
+    position:relative;
+    margin-left: 2rem;
+    top: 9rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.bgimg{
+    /*background-image: linear-gradient(transparent, rgb(0, 0, 0) 70%), url(../../assets/img/blackforest.png);*/ /*vertical*/
+    background-image:-webkit-linear-gradient(right, transparent,rgb(0, 0, 0) 100%), url(../../assets/img/blackforest.png);
+    background-size:500px;
+    right: 1rem;
+    position:absolute;
+    top:0px;
+    width:500px;
+    height: 380px;
+    border-radius: 0 50px 50px 0px;
+}
+
+.btn{
+    position:relative;
+    top:11rem;
+    left: 5rem;
+}

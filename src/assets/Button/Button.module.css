@@ -1,0 +1,29 @@
+
+.txt a{
+    outline:1px solid #aaa;
+    height: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: .8rem;
+
+    border-radius: 20px;
+}
+
+/*nav bar animation*/
+.txt a,
+.txt a:after,
+.txt a:before {
+  transition: all .5s;
+}
+
+
+.txt a:hover{
+    outline:1px solid #d0d0d0;
+    color:#d0d0d0;
+}
