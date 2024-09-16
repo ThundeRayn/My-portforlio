@@ -1,6 +1,6 @@
 import styles from './OneTrack.module.css';
 import frame from '../../../assets/img/Apple_16-inch-MacBook-Pro.png';
-import img_signin from '../../../assets/img/dashboard abrev.jpg';
+import img_signin from '../../../assets/img/dashboard abrev.png';
 
 const OneTrack = () => {
   return (

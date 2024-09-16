@@ -32,6 +32,10 @@
     max-width: 415px;
     font-weight: 200;
     font-size: 1rem;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .intro1{
     position:relative;
@@ -39,6 +43,22 @@
     top: 9rem;
     font-weight: 600;
     font-size: 2rem;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*fadeiin animation*/
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 .bgimg{
@@ -57,4 +77,8 @@
     position:relative;
     top:11rem;
     left: 5rem;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }

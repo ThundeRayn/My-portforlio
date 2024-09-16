@@ -9,7 +9,7 @@ const Hero = () => {
 
       <div className={styles["bgimg"]} />
 
-      <div className={styles["intro1"]}>
+      <div className={styles["intro1"]} >
           Hi there
           <HiCursorClick size={28} color='#aaa'/>
         </div>
