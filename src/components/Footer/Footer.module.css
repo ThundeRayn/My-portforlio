@@ -4,19 +4,16 @@
     margin-top:3rem;
     background-color: rgb(41, 41, 41);
     box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
-    cursor:pointer;
 }
 
 .itemlist{
     padding-top:2rem;
-    /*margin-left: 3rem;*/
     text-align: center;
 }
 
 .item{
     padding-top: 10px;
     padding-bottom: 15px;
-    cursor:pointer;
 
     position:relative;
     font-weight: 400;
@@ -38,7 +35,15 @@
 .item a{
     padding: 15px;
     color: #aaa;
+    cursor:pointer;
     text-decoration: none;
+}
+.copy{
+  display: inline-block;
+  cursor:pointer;
+}
+.item span{
+  padding:15px;
 }
 
 .item a,

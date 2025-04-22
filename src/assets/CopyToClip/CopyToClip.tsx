@@ -1,25 +1,41 @@
-import {useRef} from 'react';
 
-const CopyToClip = (content:string) => {
+import { MdContentCopy } from "react-icons/md";
+import styles from './CopyToClip.module.css';
+import { FaCheck } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { useHover } from "@uidotdev/usehooks";
 
-const textRef = useRef('');
-
-const copyToClipboard = () =>{
-    if(textRef.current){
-        //textRef.current.select(content);
-        document.execCommand('copy');
-        textRef.current = content;
-    }
+interface Props{
+    content:string;
 }
+
+const CopyToClip = ({content}:Props) => {
+
+    const [copied,setCopied]= useState(false);
+    const [ref,hovering] = useHover();
+
+    useEffect(()=>{
+        setCopied(false);
+    },[hovering])
 
 return (
     
-    <div>
-        <button
-            onClick={copyToClipboard}>
-            btn
-        </button>
-    </div>
+    <>
+        <div 
+            onClick={() => {
+                navigator.clipboard.writeText(content);
+                setCopied(true);
+            }}
+            className={styles["btn"]}
+            ref={ref}
+        >
+            {hovering?
+                (copied?
+                    <FaCheck size="14"/>
+                    :<MdContentCopy size="14"/>)
+                :<MdContentCopy size="14"/>}
+        </div>
+    </>
   )
 }
 

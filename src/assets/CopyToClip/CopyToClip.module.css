@@ -1,0 +1,19 @@
+.btn{
+    color:grey;
+    background-color:none;
+    border:none;
+    outline:none;
+    box-shadow:none;
+
+}
+
+.btn,
+.btn:after,
+.btn:before {
+  transition: all .5s;
+}
+
+
+.btn:hover{
+    color:#d0d0d0;
+}
