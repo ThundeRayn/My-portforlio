@@ -37,6 +37,8 @@
 
 .item a{
     padding: 15px;
+    color: #aaa;
+    text-decoration: none;
 }
 
 .item a,

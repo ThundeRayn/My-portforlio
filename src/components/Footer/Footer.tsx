@@ -8,7 +8,8 @@ const Footer = () => {
               <a onClick={()=> window.open("https://www.linkedin.com/in/shirong-tang/", "_blank")}>linkedin</a></li>
             <li className={styles['item']}>
               <a href="mailto:tangshirong477@gmail.com">tangshirong477@gmail.com</a></li>
-            <li className={styles['item']}>phone: +1 226(339)8351 </li>
+            <li className={styles['item']}>
+              <a>phone: +1 226(339)8351</a> </li>
         </ul>
         
     </div>

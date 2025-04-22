@@ -2,13 +2,14 @@ import styles from './Button.module.css';
 
 interface Props{
   bname:string;
-  link:string;
+  method:()=>void;
   width:string;
 }
-const Button = ({bname,link,width}:Props) => {
+const Button = ({bname,method,width}:Props) => {
   return (
     <div className={styles["txt"]} style={{width:width}}>
-      <a href={link}>{bname}</a></div>
+      <a onClick={method}>{bname}</a>
+    </div>
   )
 }
 

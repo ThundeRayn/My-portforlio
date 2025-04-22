@@ -4,6 +4,10 @@ import Button from '../../assets/Button';
 
 const Hero = () => {
 
+  const scrollToBottom = () => {
+    window.scrollTo(0,document.body.scrollHeight)
+  }
+
   return (
     <div className={styles["container"]}>  
 
@@ -20,8 +24,7 @@ const Hero = () => {
         CA. Find my contact info below!</div>
       
       <div className={styles["btn"]}>
-        <Button bname={"contact"} link={"/about"} width={"200px"}/></div>
-
+        <Button bname={"contact"} method={scrollToBottom} width={"200px"}/></div>
       
     </div>
   )
