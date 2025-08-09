@@ -2,11 +2,36 @@
     margin: 20px 0px;
     height: 300px;
     width: 200px;
-    border: 1px dotted white;
+    /* border: 1px dotted white; */
     border-radius: 10px;
     transition: transform 0.3s ease;
     position:relative;
+    overflow:hidden;
 }
+
+/* creating hover override border */
+
+.techField::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(0deg, #959595, #4d4d4d);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  transition: background 0.5s ease;
+  z-index: -1;
+}
+
+.techField:hover::before {
+  background: linear-gradient(0deg, #959595, #5c5c5c, #ffffff);
+}
+
+/* ended creating hover override border */
 
 .techField:hover {
     transform: translateY(-5px);
@@ -19,7 +44,7 @@
     left: 85px;
     padding: 7.5px 15px;
     border-radius: 30px 30px 0 0; /* top semi-circle */
-    opacity: 0.2;
+    opacity: 0;
     width: 30px;
     height: 15px;
     box-sizing: border-box;
