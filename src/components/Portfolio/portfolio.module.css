@@ -27,10 +27,10 @@
     top: var(--before-top, 0);
     left: var(--before-left, 0);
     transform: translate(-45%, -45%);
-    width:300px;
-    height:300px;
-    background:radial-gradient(white, transparent,transparent);
-    opacity:0;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(rgba(255,255,255,.5), transparent,transparent);
+    opacity: 1; /* Always visible */
     transition: opacity 0.4s ease;
     pointer-events: none;
 } 

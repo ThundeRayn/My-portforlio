@@ -1,23 +1,39 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './portfolio.module.css';
+
+const IMG_SIZE = 120; // px
+const INNER_RADIUS = IMG_SIZE / 2;
 
 const Portfolio = () => {
   const avatarRef = useRef<HTMLAnchorElement>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    e.currentTarget.style.setProperty('--before-top', `${y}px`);
-    e.currentTarget.style.setProperty('--before-left', `${x}px`);
-  };
+  useEffect(() => {
+    const handleDocumentMouseMove = (e: MouseEvent) => {
+      if (!avatarRef.current) return;
+      const rect = avatarRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = e.clientX - centerX;
+      const dy = e.clientY - centerY;
+      const angle = Math.atan2(dy, dx);
+      // Calculate the point on the border of the image, but do not move the image or link
+      const edgeX = rect.width / 2 + Math.cos(angle) * INNER_RADIUS;
+      const edgeY = rect.height / 2 + Math.sin(angle) * INNER_RADIUS;
+      avatarRef.current.style.setProperty('--before-top', `${edgeY}px`);
+      avatarRef.current.style.setProperty('--before-left', `${edgeX}px`);
+    };
+
+    document.addEventListener('mousemove', handleDocumentMouseMove);
+    return () => {
+      document.removeEventListener('mousemove', handleDocumentMouseMove);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.avatar}>
         <a
           ref={avatarRef}
-          onMouseMove={handleMouseMove}
         >
           <img
             src="/img/crow-portfolio.webp"
