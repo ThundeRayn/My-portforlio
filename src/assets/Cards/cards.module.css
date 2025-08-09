@@ -1,0 +1,49 @@
+.techField {
+    margin: 20px 0px;
+    height: 300px;
+    width: 200px;
+    border: 1px dotted white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position:relative;
+}
+
+.techField:hover {
+    transform: translateY(-5px);
+}
+
+.techField .dots{
+    background-color: white;
+    position: absolute;
+    top: -15px;
+    left: 85px;
+    padding: 7.5px 15px;
+    border-radius: 30px 30px 0 0; /* top semi-circle */
+    opacity: 0.2;
+    width: 30px;
+    height: 15px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: 50% 100%;
+}
+
+.techField:hover .dots {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .techField{
+        margin:0;
+        width: 80%;
+        height: 400px;
+    }
+    .techField .dots{
+        left: calc(50% - 15px); /* 10px is half of 20px width */
+        width: 20px;
+        height: 10px;
+        /* Remove transform: translateX(-50%); */
+    }
+}

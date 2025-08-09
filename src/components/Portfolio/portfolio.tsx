@@ -1,49 +1,26 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styles from './portfolio.module.css';
+import Avatar from '../../assets/Avatar';
+import Cards from '../../assets/Cards';
 
-const IMG_SIZE = 120; // px
-const INNER_RADIUS = IMG_SIZE / 2;
-
-const Portfolio = () => {
-  const avatarRef = useRef<HTMLAnchorElement>(null);
-
-  useEffect(() => {
-    const handleDocumentMouseMove = (e: MouseEvent) => {
-      if (!avatarRef.current) return;
-      const rect = avatarRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-      const dx = e.clientX - centerX;
-      const dy = e.clientY - centerY;
-      const angle = Math.atan2(dy, dx);
-      // Calculate the point on the border of the image, but do not move the image or link
-      const edgeX = rect.width / 2 + Math.cos(angle) * INNER_RADIUS;
-      const edgeY = rect.height / 2 + Math.sin(angle) * INNER_RADIUS;
-      avatarRef.current.style.setProperty('--before-top', `${edgeY}px`);
-      avatarRef.current.style.setProperty('--before-left', `${edgeX}px`);
-    };
-
-    document.addEventListener('mousemove', handleDocumentMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleDocumentMouseMove);
-    };
-  }, []);
+const portfolio = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.avatar}>
-        <a
-          ref={avatarRef}
-        >
-          <img
-            src="/img/crow-portfolio.webp"
-            alt="Crow Profile"
-            style={{ width: '120px', height: '120px', borderRadius: '50%', display: 'block' }}
-          />
-        </a>
+      <Avatar />
+
+      <h3 className={styles.title}>
+        My Favoriate Tech Stack
+      </h3>
+
+      <div className={styles.techContainer}>
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
       </div>
     </div>
   );
 };
 
-export default Portfolio;
+export default portfolio;
