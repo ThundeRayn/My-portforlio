@@ -25,7 +25,6 @@ const Hero = () => {
       
       <div className={styles["btn"]}>
         <Button bname={"contact"} method={scrollToBottom} width={"200px"}/></div>
-      
     </div>
   )
 }

@@ -1,9 +1,12 @@
 .container{
+    position: relative; /* Fix: relative for absolute children */
     height: 400px;
-    position:flex;
     background-color: rgb(5, 5, 5);
-    /*background-image: linear-gradient(transparent, rgb(0, 0, 0) 70%), url(../../assets/img/blackforest.png);
-    background-size: 350px;*/
+    overflow: hidden; /* Prevent overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -26,23 +29,23 @@
   }
 
 .intro0{
-    position:relative;
-    margin-left: 2.2rem;
-    top: 9.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
     max-width: 415px;
     font-weight: 200;
     font-size: 1rem;
+    position: relative;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 .intro1{
-    position:relative;
-    margin-left: 2rem;
-    top: 9rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
     font-weight: 600;
     font-size: 2rem;
+    position: relative;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -62,23 +65,67 @@
 }
 
 .bgimg{
-    /*background-image: linear-gradient(transparent, rgb(0, 0, 0) 70%), url(../../assets/img/blackforest.png);*/ /*vertical*/
-    background-image:-webkit-linear-gradient(right, transparent,rgb(0, 0, 0) 100%), url(../../assets/img/blackforest.png);
-    background-size:500px;
-    right: 1rem;
-    position:absolute;
-    top:0px;
-    width:500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
     height: 380px;
     border-radius: 0 50px 50px 0px;
+    z-index: 0;
+
+    background-image:-webkit-linear-gradient(right, transparent,rgb(0, 0, 0) 100%), url(../../assets/img/blackforest.png);
+    background-size:500px;
+    /* Add a semi-transparent overlay using a pseudo-element */
+}
+
+.bgimg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 50px 50px 0px;
+    background: rgba(0, 0, 0, 0.25); /* Adjust opacity as needed */
+    pointer-events: none;
 }
 
 .btn{
-    position:relative;
-    top:11rem;
-    left: 5rem;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 0;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .intro0,
+  .intro1,
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+  }
+
+  .intro0 {
+    font-size: 0.95rem;
+    max-width: 350px;
+  }
+  .intro1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro0 {
+    font-size: 0.85rem;
+    max-width: 80vw;
+  }
+  .intro1 {
+    font-size: 1.1rem;
+  }
 }
