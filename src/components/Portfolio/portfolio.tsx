@@ -14,7 +14,14 @@ const portfolio = () => {
       </h3>
 
       <div className={styles.techContainer}>
-        <Cards />
+        <Cards>
+          <div className={styles.techContent}>
+            <h3 className={styles.techTitle}>Titile</h3>
+            <p className={styles.techItem}>Item</p>
+            <p className={styles.techItem}>Item</p>
+            <p className={styles.techItem}>Item</p>
+          </div>
+        </Cards>
         <Cards />
         <Cards />
         <Cards />
