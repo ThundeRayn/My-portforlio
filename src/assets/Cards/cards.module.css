@@ -63,7 +63,7 @@
 @media screen and (max-width: 500px) {
     .techField{
         margin:0;
-        width: 80%;
+        width:70vw;
         height: 400px;
     }
     .techField .dots{

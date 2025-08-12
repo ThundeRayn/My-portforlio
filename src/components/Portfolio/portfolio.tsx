@@ -15,6 +15,10 @@ import TailwindIcon from '/src/assets/icons/tailwind.svg?react';
 import ThreeJSIcon from '/src/assets/icons/cube.svg?react';
 import shadcnUIIcon from '/src/assets/icons/shadcn.svg?react';
 
+import githubIcon from '/src/assets/icons/github.svg?react';
+import awsIcon from '/src/assets/icons/aws.svg?react';
+import DockerIcon from '/src/assets/icons/docker.svg?react';
+
 const portfolio = () => {
 
   return (
@@ -45,14 +49,20 @@ const portfolio = () => {
           icons={[NodeJSIcon, JavaScriptIcon, PostgreSQLIcon, MangoDBIcon]}
         />
 
-        <Cards id="card-cicd">
+        <TechCard
+          title={'CI/CD'} 
+          items={['GitHub','AWS','Docker']}
+          icons={[githubIcon, awsIcon, DockerIcon]}
+        />
+
+        {/* <Cards id="card-cicd">
           <div className={styles.techContent}>
             <h3 className={styles.techTitle}>CI/CD</h3>
             <p className={styles.techItem}>GitHub</p>
             <p className={styles.techItem}>AWS</p>
             <p className={styles.techItem}>Docker</p>
           </div>
-        </Cards>
+        </Cards> */}
       </div>
     </div>
   );

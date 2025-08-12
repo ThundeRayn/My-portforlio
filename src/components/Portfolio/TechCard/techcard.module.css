@@ -1,3 +1,4 @@
+
 /* techContent styles */
 .techContent{
     display:flex;
@@ -22,8 +23,8 @@
 }
 
 .techItem{
-    border:1px solid rgb(86, 86, 86);
-    background-color: rgb(56, 56, 56);
+    border:1px solid rgb(34, 34, 34);
+    background-color: rgb(0, 0, 0);
     margin: 0;
     display:flex;
     justify-content: center;
@@ -49,12 +50,12 @@
     scale:calc(1.1);
     cursor:pointer;
     color:white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
 }
 
 .techItem:hover .techIcon{
     fill: white;
 }
-
 /* cards hover animation*/
 :global(#card-tech:hover #tech-title){
     color: white;

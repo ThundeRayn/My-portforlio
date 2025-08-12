@@ -5,8 +5,11 @@ import Button from '../../assets/Button';
 const Hero = () => {
 
   const scrollToBottom = () => {
-    window.scrollTo(0,document.body.scrollHeight)
-  }
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+}
 
   return (
     <div className={styles["container"]}>  
@@ -19,9 +22,8 @@ const Hero = () => {
         </div>
       <div className={styles["intro1"]}>I design and develop UX/UI web  solutions</div>
       <div className={styles["intro0"]}>
-        My name is Shirong, a passionate UX/UI designer
-        & website developer, based on Ontario,
-        CA. Find my contact info below!</div>
+        My name is Shirong, I design and develop clean web solutions.
+        Find my contact info below!</div>
       
       <div className={styles["btn"]}>
         <Button bname={"contact"} method={scrollToBottom} width={"200px"}/></div>
