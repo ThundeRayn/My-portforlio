@@ -1,7 +1,6 @@
-import React from 'react';
+
 import styles from './portfolio.module.css';
 import Avatar from '../../assets/Avatar';
-import Cards from '../../assets/Cards';
 import TechCard from './TechCard';
 import ReactIcon from '/src/assets/icons/react.svg?react';
 import TypeScriptIcon from '/src/assets/icons/typescript.svg?react';
