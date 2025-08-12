@@ -22,8 +22,8 @@ const Hero = () => {
         </div>
       <div className={styles["intro1"]}>I design and develop UX/UI web  solutions</div>
       <div className={styles["intro0"]}>
-        My name is Shirong, I design and develop clean web solutions.
-        Find my contact info below!</div>
+        I'm Shirong T., a passionate web developer focused on creating clean and precise moblie and website solutions.
+        <br/>Find my contact info below!</div>
       
       <div className={styles["btn"]}>
         <Button bname={"contact"} method={scrollToBottom} width={"200px"}/></div>
