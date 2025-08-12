@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="80"
+  height="80"
+  viewBox="0 0 80 80"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Top line (unchanged) -->
+  <rect
+    x="35"
+    y="12"
+    width="10"
+    height="56"
+    fill="currentColor"
+    transform="rotate(45 40 40)"
+  />
+  <!-- Bottom line moved right and up along its own diagonal (45°) -->
+  <rect
+    x="60"
+    y="40"
+    width="10"
+    height="34"
+    fill="currentColor"
+    transform="rotate(45 65 40)"
+  />
+</svg>

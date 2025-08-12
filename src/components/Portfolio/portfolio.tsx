@@ -2,6 +2,18 @@ import React from 'react';
 import styles from './portfolio.module.css';
 import Avatar from '../../assets/Avatar';
 import Cards from '../../assets/Cards';
+import TechCard from './TechCard';
+import ReactIcon from '/src/assets/icons/react.svg?react';
+import TypeScriptIcon from '/src/assets/icons/typescript.svg?react';
+import JavaScriptIcon from '/src/assets/icons/javascript.svg?react';
+import HTMLIcon from '/src/assets/icons/html.svg?react';
+import JavaIcon from '/src/assets/icons/java.svg?react';
+import PostgreSQLIcon from '/src/assets/icons/elephant.svg?react';
+import NodeJSIcon from '/src/assets/icons/nodejs.svg?react';
+import MangoDBIcon from '/src/assets/icons/mangodb.svg?react';
+import TailwindIcon from '/src/assets/icons/tailwind.svg?react';
+import ThreeJSIcon from '/src/assets/icons/cube.svg?react';
+import shadcnUIIcon from '/src/assets/icons/shadcn.svg?react';
 
 const portfolio = () => {
 
@@ -14,17 +26,33 @@ const portfolio = () => {
       </h3>
 
       <div className={styles.techContainer}>
-        <Cards>
+
+        <TechCard 
+          title={'Programming'} 
+          items={['TypeScript','JavaScript','HTML CSS','Java']}
+          icons={[TypeScriptIcon, JavaScriptIcon, HTMLIcon, JavaIcon]}
+        />
+
+        <TechCard
+          title={'FrontEnd'} 
+          items={['React','Tailwind','shadcn/UI','Three.js']}
+          icons={[ReactIcon, TailwindIcon, shadcnUIIcon, ThreeJSIcon]}
+        />
+
+        <TechCard
+          title={'BackEnd'} 
+          items={['NodeJS','Express','PostgreSQL','MangoDB']}
+          icons={[NodeJSIcon, JavaScriptIcon, PostgreSQLIcon, MangoDBIcon]}
+        />
+
+        <Cards id="card-cicd">
           <div className={styles.techContent}>
-            <h3 className={styles.techTitle}>Titile</h3>
-            <p className={styles.techItem}>Item</p>
-            <p className={styles.techItem}>Item</p>
-            <p className={styles.techItem}>Item</p>
+            <h3 className={styles.techTitle}>CI/CD</h3>
+            <p className={styles.techItem}>GitHub</p>
+            <p className={styles.techItem}>AWS</p>
+            <p className={styles.techItem}>Docker</p>
           </div>
         </Cards>
-        <Cards />
-        <Cards />
-        <Cards />
       </div>
     </div>
   );

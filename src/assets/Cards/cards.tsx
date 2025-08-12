@@ -2,16 +2,18 @@ import React from 'react'
 import styles from './cards.module.css';
 
 interface BorderLightCardProps {
+  id?: string;
   children?: React.ReactNode;
 }
 
-const Cards: React.FC<BorderLightCardProps> = ({ children }) => {
+const Cards: React.FC<BorderLightCardProps> = ({ id,children }) => {
   return (
     <div 
+      id={id}
       className={styles.techField}
     >
       <div className={styles.dots}></div>
-      {children}
+        {children}
     </div>
   );
 }

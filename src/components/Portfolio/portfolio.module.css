@@ -35,23 +35,24 @@
     flex-direction:column;
     justify-content: stretch;
     align-items: center;
+
     width:100%;
     height:100%;
-
     gap:0px;
-
+    
     border:1px dashed white;
 }
 
 .techTitle{
-    border:1px solid white;
+    /* border:1px solid white; */
     font-size:1.2rem;
     font-weight:500;
-    color:white;
+    color:rgb(197, 197, 197);
 }
 
 .techItem{
     border:1px solid white;
+    margin: 0;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -60,11 +61,17 @@
     font-size:1rem;
     font-weight:400;
     color:white;
-
+    flex-grow: 1;
     transition:scale 0.3s ease;
 }
+
 
 .techItem:hover{
     scale:calc(1.1);
     cursor:pointer;
+}
+
+/* cards hover animation*/
+:global(#card-programming:hover #program-title){
+    color: white;
 }
