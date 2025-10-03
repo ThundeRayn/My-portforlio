@@ -17,10 +17,10 @@ const Hero = () => {
       <div className={styles["bgimg"]} />
 
       <div className={styles["intro1"]} >
-          <h2>Hi there <HiCursorClick size={28} color='#ffffffff'/></h2>
+          Hi there <HiCursorClick size={28} color='#aaa'/>
         </div>
       <div className={styles["intro1"]} >
-        <h2>I design and develop software solutions</h2>
+        I design and develop software solutions
       </div>
       <div className={styles["intro0"]}>
         I'm Shirong T., a passionate developer focused on creating clean and precise software solutions.
