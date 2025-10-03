@@ -3,6 +3,7 @@ import Hero from './components/HeroSection';
 import Designs from './components/Designs';
 import Footer from './components/Footer';
 import Porfolio from './components/Portfolio';
+import { SlideCards } from './components/Experience/SlideCards';
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
     <>
     <Navbar/>
     <Hero/>
+
+    <SlideCards/>
 
     <Porfolio/>
     <Designs/>
