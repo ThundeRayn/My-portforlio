@@ -10,34 +10,34 @@ interface ProjectCard {
 
 const CardData: ProjectCard[] = [
   {
-    title: "Designers",
-    desc: "Tools that work like you do.",
+    title: "AI Explorer",
+    desc: "building toward AI native app & web.",
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/designers.webp",
-    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-designer.webp?w=480",
+    thumb: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=480",
   },
   {
-    title: "Marketers",
-    desc: "Create faster, explore new possibilities.",
+    title: "UX Design",
+    desc: "Build Visually Stunning Websites.",
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/marketers.webp",
-    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480",
+    thumb: "https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=480",
   },
   {
-    title: "VFX filmmakers",
-    desc: "From concept to cut, faster.",
+    title: "Full Stack Dev",
+    desc: "Custom software for your business needs.",
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp",
-    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480",
+    thumb: "https://images.unsplash.com/photo-1627896181038-a0cf83c86008?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=480",
   },
   {
-    title: "Content creators",
-    desc: "Make scroll-stopping content, easily.",
+    title: "B2B Custom",
+    desc: "Solutions best suited for your business.",
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp",
-    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480",
+    thumb: "https://plus.unsplash.com/premium_photo-1752230474021-5749c334925a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=480",
   },
   {
-    title: "Art directors",
-    desc: "Creative control at every stage.",
+    title: "Hackathon Sprinter",
+    desc: "Rapid prototyping under pressure, but with passion.",
     bg: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp",
-    thumb: "https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480",
+    thumb: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGE5cGs3M3NkOWF0YzgxbjNwYTQwZmdocG95azN1bHJoaXdoNDZhZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DHBGehJ3FSZEygszX3/giphy.gif?w=480",
   },
 ];
 
@@ -87,7 +87,7 @@ export const SlideCards: React.FC = () => {
   }, [current]);
 
   return (
-    <section>
+    <section className={styles.now}>
       <div className={styles.head}>
         <h2>Previous work examples</h2>
         <div className={styles.controls}>
