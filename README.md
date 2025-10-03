@@ -2,7 +2,12 @@
 
 Welcome to my personal portfolio!  
 
-I'm a creative and logical developer with a passion for building interactive experiences, exploring new ideas, and collaborating on exciting projects. Whether it's hackathons, game jams, or innovative side projects, I love diving in, learning fast, and creating things that make an impact.  
+I'm a creative and logical developer with a passion for 
+- building interactive experiences
+- exploring new ideas
+- collaborating on exciting projects. 
+
+Whether it's hackathons, game jams, or innovative side projects, I love diving in, learning fast, and creating things that make an impact.  
 
 ![Portfolio GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3AwazlybWViNWp4aHhrNW51cDIzNGFsMWV4M294bXRkNXRtNjhqYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rzcYzbp8BZmwWTUPFa/giphy.gif)
 
