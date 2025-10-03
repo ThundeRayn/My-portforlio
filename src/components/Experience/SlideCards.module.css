@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .head {
   max-width: 1400px;
   margin: auto;
@@ -156,7 +157,7 @@
   cursor: pointer;
 }
 .projectCardBtn:hover {
-  background: #ff824f;
+  background: #565656;
 }
 .dots {
   display: flex;
@@ -165,8 +166,8 @@
   padding: 20px 0;
 }
 .dot {
-  width: 13px;
-  height: 13px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
   cursor: pointer;

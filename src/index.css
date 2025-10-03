@@ -17,5 +17,6 @@
   --speed: 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --closed: 5rem;
   --open: 30rem;
-  --accent: #ff6b35;
+  --accent: #9e9e9e;
+  --previous-accent:#ff6b35;
 }
