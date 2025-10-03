@@ -25,6 +25,6 @@ Whether it's hackathons, game jams, or innovative side projects, I love diving i
 I'm always happy to chat, share ideas, or collaborate. Feel free to reach out through LinkedIn, email, or any social platform.  
 
 🌐 **Check out my portfolio:**  
-[**Visit My Website**](https://shirong.site)  
+[**View My Website**](https://shirong.site)  
 
 Thanks for stopping by, and I hope you enjoy exploring my work!

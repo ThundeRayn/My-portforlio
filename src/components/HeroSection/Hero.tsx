@@ -17,12 +17,13 @@ const Hero = () => {
       <div className={styles["bgimg"]} />
 
       <div className={styles["intro1"]} >
-          Hi there
-          <HiCursorClick size={28} color='#aaa'/>
+          <h2>Hi there <HiCursorClick size={28} color='#ffffffff'/></h2>
         </div>
-      <div className={styles["intro1"]}>I design and develop UX/UI web  solutions</div>
+      <div className={styles["intro1"]} >
+        <h2>I design and develop software solutions</h2>
+      </div>
       <div className={styles["intro0"]}>
-        I'm Shirong T., a passionate web developer focused on creating clean and precise moblie and website solutions.
+        I'm Shirong T., a passionate developer focused on creating clean and precise software solutions.
         <br/>Find my contact info below!</div>
       
       <div className={styles["btn"]}>

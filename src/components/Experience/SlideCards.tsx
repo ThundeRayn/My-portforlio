@@ -89,7 +89,7 @@ export const SlideCards: React.FC = () => {
   return (
     <section>
       <div className={styles.head}>
-        <h2>Boost your professional workflow and productivity</h2>
+        <h2>Previous work examples</h2>
         <div className={styles.controls}>
           <button
             className={styles.navBtn}
